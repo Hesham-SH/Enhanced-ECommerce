@@ -22,9 +22,14 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts() => Ok(await _repo.GetProductsAsync()); 
 
-
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetSingleProduct(int id) => Ok(await _repo.GetProductByIdAsync(id));
+
+        [HttpGet("types")]
+        public async Task<ActionResult<ProductType>> GetProductTypes() => Ok(await _repo.GetProductTypesAsync());
+
+        [HttpGet("brands")]
+        public async Task<ActionResult<ProductBrand>> GetProductBrands() => Ok(await _repo.GetProductBrandsAsync());
 
     }
 }
