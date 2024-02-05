@@ -37,7 +37,24 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 
 ## Getting Started
 1. Clone the repository
+   - git clone (https://github.com/Hesham-SH/Enhanced-ECommerce.git)
 
-   git clone (https://github.com/Hesham-SH/Enhanced-ECommerce.git)
+2. **Ensure .NET Core SDK is installed:**
+   - Make sure you have the .NET Core SDK installed on your machine. You can download it from [here](https://dotnet.microsoft.com/download).
+
+3. **Navigate to the API directory:**
+   - Open your terminal or command prompt and navigate to the `API` directory of the project.
+   cd API
+
+3. **Run migrations to set up the database:**
+   - Execute the following command to run migrations and set up the database:
+   dotnet ef database update
+
+3. **Start the API:**
+   - Run the following command to start the API:
+   - Open your terminal or command prompt and navigate to the `API` directory of the project.
+   cd API
+   "dotnet run" or you could use "dotnet watch --no-hot-reload" instead to avoid potential problems.
 
 
+   **<p style="font-size: larger; text-align: center;"><strong>Good Luck With Your Code</strong></p>**
