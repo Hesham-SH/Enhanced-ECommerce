@@ -51,10 +51,11 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
    dotnet ef database update
 
 3. **Start the API:**
-   - Run the following command to start the API:
    - Open your terminal or command prompt and navigate to the `API` directory of the project.
-   cd API
-   "dotnet run" or you could use "dotnet watch --no-hot-reload" instead to avoid potential problems.
+   - cd API
+  
+   - Run the following command to start the API:
+   - "dotnet run" or you could use "dotnet watch --no-hot-reload" instead to avoid potential problems.
 
 
-   **<p style="font-size: larger; text-align: center;"><strong>Good Luck With Your Code</strong></p>**
+   **<p style="font-size: 2rem; text-align: center; margin:auto;"><strong>Good Luck With Your Code</strong></p>**
