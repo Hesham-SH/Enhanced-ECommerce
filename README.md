@@ -36,7 +36,7 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 - ![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
 
 ## Getting Started
-1. Clone the repository
+1. **Clone the repository**
    - git clone (https://github.com/Hesham-SH/Enhanced-ECommerce.git)
 
 2. **Ensure .NET Core SDK is installed:**
