@@ -52,7 +52,8 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 
 3. **Start the API:**
    - Open your terminal or command prompt and navigate to the `API` directory of the project.
-   - ```bash cd API
+   - ```bash
+   cd API
   
    - Run the following command to start the API:
    - "dotnet run" or you could use "dotnet watch --no-hot-reload" instead to avoid potential problems.
