@@ -38,6 +38,6 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 ## Getting Started
 1. Clone the repository
 
-   git clone https://github.com/your-username/your-repository.git
+   git clone (https://github.com/Hesham-SH/Enhanced-ECommerce.git)
 
 
