@@ -10,7 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddApplicationServices(builder.Configuration);
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,6 +24,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles();
+//Delegate --> function signature that you could assign any function to it using the same signature
 
 app.UseCors("CorsPolicy");
 

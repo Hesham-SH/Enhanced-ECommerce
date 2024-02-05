@@ -1,8 +1,10 @@
 using API.Errors;
+using Core.Entities;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 
 namespace API.Extensions
 {
@@ -12,12 +14,20 @@ namespace API.Extensions
         {
             service.AddEndpointsApiExplorer();
             service.AddSwaggerGen();
-            service.AddDbContext<SiteContext>(opt =>  
+
+            service.AddDbContext<SiteContext>(opt => 
             {
                 opt.UseSqlServer(config.GetConnectionString("Connection"));
             });
 
+            service.AddSingleton<IConnectionMultiplexer>(connection => {
+                var options = ConfigurationOptions.Parse(config.GetConnectionString("Redis"));
+                return ConnectionMultiplexer.Connect(options);
+            });
+
+            service.AddScoped<IBasketRepository, BasketRepository>();
             service.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            service.AddScoped<IUnitOfWork, UnitOfWork>();
             service.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             service.Configure<ApiBehaviorOptions>(opt => 
             {
@@ -46,6 +56,8 @@ namespace API.Extensions
             });
 
             return service;
-            }
+        }
     }
+
+    
 }
